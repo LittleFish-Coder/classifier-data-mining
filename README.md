@@ -39,7 +39,9 @@ The predict method of the KNN classifier takes the test data as input and return
 
 The evaluate method of the KNN classifier takes the test data and the true labels as input and returns the accuracy of the model.
 
-## Results - text file: result\_{k}.txt
+## Results
+
+### Text file: result\_{k}.txt
 
 The text file contains the following information:
 
@@ -47,16 +49,23 @@ The text file contains the following information:
 {id1 attribute1, id2 attribute2, ...} member_card = {label}
 ```
 
+### Comparison
+
+| k   | Accuracy |
+| --- | -------- |
+| 3   | 0.66     |
+| 4   | 0.62     |
+| 5   | 0.64     |
+| 6   | 0.64     |
+| 9   | 0.67     |
+| 10  | 0.67     |
+
 ## Usage
 
 clone the repository and run the following command in the terminal:
 
 ```bash
 git clone https://github.com/LittleFish-Coder/classifier-data-mining.git
-```
-
-```bash
-
 ```
 
 ```bash
