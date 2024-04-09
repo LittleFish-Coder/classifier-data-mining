@@ -65,9 +65,11 @@ def data_preprocessing(data: list):
     # data transformation
     ## one-hot encoding for marital_status
     df = pd.get_dummies(df, columns=["marital_status"])
-    ## normalization for age and year_income
-    df["age"] = (df["age"] - df["age"].mean()) / df["age"].std()
-    df["year_income"] = (df["year_income"] - df["year_income"].mean()) / df["year_income"].std()
+    ## normalization for age and year_income (min-max normalization)
+    df["age"] = (df["age"] - df["age"].min()) / (df["age"].max() - df["age"].min())
+    df["year_income"] = (df["year_income"] - df["year_income"].min()) / (
+        df["year_income"].max() - df["year_income"].min()
+    )
     ## categorical encoding for member_card
     df["member_card"] = df["member_card"].map({"Basic": 0, "Normal": 1, "Silver": 2, "Gold": 3})
 
